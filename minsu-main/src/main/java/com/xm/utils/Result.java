@@ -17,18 +17,18 @@ public class Result<T> implements Serializable {
     private boolean success;
 
     public static <T> Result<T> success() {
-        return new Result<>(200, "成功", null, true);
+        return new Result<>(20000, "成功", null, true);
     }
 
     public static <T> Result<T> success(T data) {
-        return new Result<>(200, "成功", data, true);
+        return new Result<>(20000, "成功", data, true);
     }
 
     public static <T> Result<T> failed(String message) {
-        return new Result<>(300, message, null, false);
+        return new Result<>(20001, message, null, false);
     }
 
     public static <T> Result<T> failed(String message, T data) {
-        return new Result<>(300, message, data, false);
+        return new Result<>(20001, message, data, false);
     }
 }
